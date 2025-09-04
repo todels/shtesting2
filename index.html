@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KP introveckan - uppgift</title>
+
+    <!-- Här inkluderas nödvändiga p5.js-bibliotek  -->
+    <!-- <script src="libraries/p5.min.js" type="text/javascript"></script> -->
+
+    <!-- Om filerna är online går det att använda CDN istället  -->
+     
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+
+    <!-- Här inkluderas själva sketchen och en fil som innehåller klassen "MovingImage" (den filen behöver du inte ändra i den här uppgiften) -->
+    <script src="ovning_introveckan.js"></script>
+    <script src="movingimage.js"></script>
+
+    <!-- Lite CSS -->
+    <style>
+      *{
+        box-sizing: border-box;
+      }
+
+      body{
+        padding: 0;
+        margin: 0;
+
+      }
+
+      #sketch-holder{
+        width: 736px;
+        height: 460px;
+        margin: 0 auto;
+      }
+
+      #info-holder{
+        font-family: arial, verdana, helvetica, sans-serif;
+        font-size: 1em;
+        text-align: center;
+        border: 1px solid #666;
+        width: 736px;
+        margin: 5px auto;
+        padding: 1em;
+      }
+
+      #nav{
+        width: 736px;
+        margin: 0 auto;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Det här är en div som innehåller själva sketchen -->
+    <div id="sketch-holder"></div>
+
+    <!-- Det här är en div som innehåller navigationen -->
+    <div id="nav">
+      <button onclick="bytScen(scen-1)">< Backa</button>
+      <button onclick="bytScen(scen+1)">Framåt ></button>
+    </div>
+
+    <!-- Det här är en div vars text och bakgrundsfärg ändras från själva sketchen, beroende på vilken scen som visas -->
+    <div id="info-holder"></div>
+  </body>
+</html>
